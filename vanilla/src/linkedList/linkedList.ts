@@ -44,12 +44,6 @@ export class LinkedList<T> {
 		this.size++;
 	}
 
-	/**
-	 * [10] -> [20] -> [30] -> null
-	 * addAfter(value, 0): [10] -> [value] -> [20] -> [30] -> null
-	 * addAfter(value, 1): [10] -> [20] -> [value] -> [30] -> null
-	 * addAfter(value, 2): [10] -> [20] -> [30] -> [value] -> null
-	 */
 	addAfter(value: T, index: number): void {
 		if (index < 0 || index > this.size) {
 			console.error('Index out of bounds');
