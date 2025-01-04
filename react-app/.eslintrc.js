@@ -18,17 +18,18 @@ module.exports = {
 			version: 'detect',
 		},
 	},
-	plugins: ['@typescript-eslint', 'prettier'],
+	plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'prettier'],
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react/recommended',
 		'plugin:react-hooks/recommended',
-		'plugin:react/jsx-runtime',
 		'plugin:jsx-a11y/recommended',
 		'prettier',
 	],
 	rules: {
-		'no-console': 'error',
+		'no-console': 0,
+		'react/react-in-jsx-scope': 0,
+		'prettier/prettier': 'error',
 	},
 };
