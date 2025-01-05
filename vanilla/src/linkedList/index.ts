@@ -29,5 +29,3 @@ document.addEventListener('DOMContentLoaded', () => {
 	const linkedListLink = document.querySelector('a[data-section="linkedList"]');
 	linkedListLink?.addEventListener('click', () => initLinkedList());
 });
-
-export { LinkedList };
