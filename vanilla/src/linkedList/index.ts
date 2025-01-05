@@ -22,6 +22,12 @@ function initLinkedList() {
 	list.addAfter(50, 3);
 	list.printList();
 
+	list.deleteFirst();
+	list.printList();
+
+	list.deleteLast();
+	list.printList();
+
 	list.getSize();
 }
 
