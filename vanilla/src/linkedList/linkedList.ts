@@ -133,7 +133,7 @@ export class LinkedList<T> {
 		this.size--;
 	}
 
-	find(value: T): ListNode<T> | null {
+	findNode(value: T): ListNode<T> | null {
 		let temp = this.head;
 
 		while (temp) {
