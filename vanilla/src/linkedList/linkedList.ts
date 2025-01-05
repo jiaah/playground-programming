@@ -133,6 +133,21 @@ export class LinkedList<T> {
 		this.size--;
 	}
 
+	find(value: T): ListNode<T> | null {
+		let temp = this.head;
+
+		while (temp) {
+			if (temp.value === value) {
+				console.log(`${value} is found.`);
+				return temp;
+			}
+			temp = temp.next;
+		}
+
+		console.log(`${value} is not found.`);
+		return null;
+	}
+
 	printList(): void {
 		let current = this.head;
 		let result = '';
@@ -141,8 +156,10 @@ export class LinkedList<T> {
 			result += `${current.value} -> `;
 			current = current.next;
 		}
+
 		result += 'null';
 		console.log(result);
+
 		const outputElement = document.getElementById("output");
 		if (outputElement) {
 			outputElement.textContent = result;

@@ -28,6 +28,12 @@ function initLinkedList() {
 	list.deleteLast();
 	list.printList();
 
+	list.delete(2);
+	list.printList();
+
+	list.find(40);
+	list.find(50);
+
 	list.getSize();
 }
 
