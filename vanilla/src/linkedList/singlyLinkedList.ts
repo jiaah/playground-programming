@@ -159,18 +159,10 @@ export class SinglyLinkedList<T> {
 
 		result += 'null';
 		console.log(result);
-
-		const outputElement = document.getElementById("output");
-		if (outputElement) {
-			outputElement.textContent = result;
-		}
 	}
 
 	getSize(): void {
-		const sizeElement = document.getElementById("size");
-		if (sizeElement) {
-			sizeElement.textContent = `Size: ${this.size}`;
-		}
+		console.log(`size: ${this.size}`);
 	}
 
 }; 

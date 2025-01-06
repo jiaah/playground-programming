@@ -1,25 +1,19 @@
+import { DoublyLinkedList } from './doublyLinkedList';
 import { SinglyLinkedList } from './singlyLinkedList';
 
-function initLinkedList() {
-	const section = document.getElementById('linkedList');
-	if (!section) return;
-
-	section.innerHTML = `
-			<div>
-				<div id="size">Size will be displayed here..</div>
-        <div id="output">Result will be displayed here...</div>
-			</div>
-    `;
-
+function initSinglyLinkedList() {
+	console.log('- Sinbly Linked List Start -');
 	const list = new SinglyLinkedList<number>();
 	list.addToHead(10);
 	list.addToHead(20);
 	list.addToHead(30);
 	list.printList();
 
-	list.addAfter(40, 0);
+	list.addAfter(40, 2);
 	list.printList();
-	list.addAfter(50, 3);
+	list.addAfter(50, 0);
+	list.printList();
+	list.addAfter(60, 1);
 	list.printList();
 
 	list.deleteFirst();
@@ -37,7 +31,34 @@ function initLinkedList() {
 	list.getSize();
 }
 
+function initDoublyLinkedList() {
+	console.log('- Doubly Linked List Start -');
+	const list = new DoublyLinkedList<number>();
+	list.addToHead(3);
+	list.addToHead(2);
+	list.addToHead(1);
+	list.printList();
+
+	list.reverse();
+	console.log('After reverse:')
+	list.printList();
+
+	list.addToTail(0);
+	list.printList();
+
+	list.addAt(4, 0);
+	list.printList();
+	list.getSize();
+	list.addAt(5, 5);
+	list.printList();
+	list.addAt(6, 2);
+	list.printList();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	const linkedListLink = document.querySelector('a[data-section="linkedList"]');
-	linkedListLink?.addEventListener('click', () => initLinkedList());
+	linkedListLink?.addEventListener('click', () => {
+		initSinglyLinkedList();
+		initDoublyLinkedList();
+	});
 });
