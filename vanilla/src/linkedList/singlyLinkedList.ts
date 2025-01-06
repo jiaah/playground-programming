@@ -1,4 +1,4 @@
-export class ListNode<T> {
+class ListNode<T> {
 	value: T | null;
 	next: ListNode<T> | null;
 	constructor(value: T, next?: ListNode<T> | null) {
@@ -7,7 +7,7 @@ export class ListNode<T> {
 	}
 };
 
-export class LinkedList<T> {
+export class SinglyLinkedList<T> {
 	head: ListNode<T> | null;
 	tail: ListNode<T> | null;
 	size: number;

@@ -1,4 +1,4 @@
-import { LinkedList } from './linkedList';
+import { SinglyLinkedList } from './singlyLinkedList';
 
 function initLinkedList() {
 	const section = document.getElementById('linkedList');
@@ -11,7 +11,7 @@ function initLinkedList() {
 			</div>
     `;
 
-	const list = new LinkedList<number>();
+	const list = new SinglyLinkedList<number>();
 	list.addToHead(10);
 	list.addToHead(20);
 	list.addToHead(30);
