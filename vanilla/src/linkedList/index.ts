@@ -1,3 +1,4 @@
+import { CircularLinkedList } from './circularLinkedList';
 import { DoublyLinkedList } from './doublyLinkedList';
 import { SinglyLinkedList } from './singlyLinkedList';
 
@@ -55,10 +56,31 @@ function initDoublyLinkedList() {
 	list.printList();
 }
 
+function initCircularLinkedList() {
+	console.log('- Circular Linked List Start -');
+	const list = new CircularLinkedList<number>();
+	list.addToHead(3);
+	list.addToHead(2);
+	list.addToHead(1);
+	list.printList();
+
+	list.addToTail(0);
+	list.printList();
+
+	list.addAfter(4, 0);
+	list.printList();
+	list.getSize();
+	list.addAfter(5, 4);
+	list.printList();
+	list.addAfter(50, 2);
+	list.printList();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	const linkedListLink = document.querySelector('a[data-section="linkedList"]');
 	linkedListLink?.addEventListener('click', () => {
 		initSinglyLinkedList();
 		initDoublyLinkedList();
+		initCircularLinkedList();
 	});
 });
