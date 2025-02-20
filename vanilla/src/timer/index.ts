@@ -1,4 +1,4 @@
-function initTimer() {
+export function initTimer() {
 	console.log('Start');
 
 	const timeStamp = Date.now();
@@ -29,7 +29,3 @@ function initTimer() {
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
-	const linkedListLink = document.querySelector('a[data-section="timer"]');
-	linkedListLink?.addEventListener('click', () => initTimer());
-});

@@ -5,7 +5,7 @@ import Timer from '../components/timer';
 
 const RoutesComponent = () => {
 	const routes = useRoutes([
-		{ path: '/', element: <Main/> },
+		{ path: '/', element: <Main /> },
 		{ path: 'timer', element: <Timer /> },
 	]);
 

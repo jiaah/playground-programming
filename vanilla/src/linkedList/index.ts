@@ -76,11 +76,8 @@ function initCircularLinkedList() {
 	list.printList();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-	const linkedListLink = document.querySelector('a[data-section="linkedList"]');
-	linkedListLink?.addEventListener('click', () => {
-		initSinglyLinkedList();
-		initDoublyLinkedList();
-		initCircularLinkedList();
-	});
-});
+export function initLinkedList() {
+	initSinglyLinkedList();
+	initDoublyLinkedList();
+	initCircularLinkedList();
+}
