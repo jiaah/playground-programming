@@ -133,22 +133,20 @@ export class SinglyLinkedList<T> {
 		this.size--;
 	}
 
-	findNode(value: T): ListNode<T> | null {
+	findNode(value: T): string {
 		let temp = this.head;
 
 		while (temp) {
 			if (temp.value === value) {
-				console.log(`${value} is found.`);
-				return temp;
+				return `${value} is found.`;
 			}
 			temp = temp.next;
 		}
 
-		console.log(`${value} is not found.`);
-		return null;
+		return `${value} is not found.`;
 	}
 
-	printList(): void {
+	printList(): string {
 		let current = this.head;
 		let result = '';
 
@@ -157,8 +155,7 @@ export class SinglyLinkedList<T> {
 			current = current.next;
 		}
 
-		result += 'null';
-		console.log(result);
+		return result + 'null';
 	}
 
 	getSize(): void {

@@ -138,7 +138,7 @@ export class DoublyLinkedList<T> {
 		this.head = prevNode;
 	}
 
-	printList(): void {
+	printList(): string {
 		let current = this.head;
 		let result = '';
 
@@ -147,8 +147,7 @@ export class DoublyLinkedList<T> {
 			current = current.next;
 		}
 
-		result += 'null';
-		console.log(result);
+		return result + 'null';
 	}
 
 	getSize(): void {

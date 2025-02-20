@@ -77,10 +77,10 @@ export class CircularLinkedList<T> {
 		this.size++;
 	}
 
-	printList(): void {
+	printList(): string {
 		if (!this.head) {
 			console.error('List is empty');
-			return;
+			return '';
 		}
 
 		let current = this.head;
@@ -91,14 +91,13 @@ export class CircularLinkedList<T> {
 
 			if (!current.next) {
 				console.error('List is unexpectedly unlinked.');
-				return;
+				return '';
 			} else {
 				current = current.next;
 			}
 		}
 		while (current !== this.head);
-
-		console.log(result);
+		return result;
 	}
 
 	getSize(): void {
